@@ -56,7 +56,7 @@
 # 운영
 
 ## 셀프 힐링(LivenessProbe)
-문제가발생한컨테이너를종료하고, RestartPolicy (default: Always)에따라다시만들어지거나, 종료된상태로남는다.
+문제가발생한컨테이너를종료하고, RestartPolicy (default: Always)에따라다시만들어지거나, 종료된상태로남는다.  
 Pod의상태를체크하다가, Pod의상태가비정상인경우kubelet을통해서재시작한다.
 
 ```
@@ -85,6 +85,7 @@ periodSeconds: 5
 
 ![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/13c09382-be4f-4ef6-8d4d-1b66437fab8e)
 
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/ef095d7b-a7e5-46e0-8a5d-188446b16c5e)
 
 
 
