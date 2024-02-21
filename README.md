@@ -36,6 +36,7 @@
 ![eventstroming](https://github.com/wwkang94/food-delivery/assets/25562517/1a934cc5-1261-4dc8-acde-ca3f57862f2d)
 
 ## MSA 아키텍처 구성도
+![architect](https://github.com/wwkang94/food-delivery/assets/25562517/b4dd5f8a-41b6-411a-8593-417bb8e96b38)
 
 
 # 구현
