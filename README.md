@@ -83,6 +83,7 @@ initialDelaySeconds: 3
 periodSeconds: 5
 ```
 
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/13c09382-be4f-4ef6-8d4d-1b66437fab8e)
 
 
 
