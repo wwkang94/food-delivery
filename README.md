@@ -14,6 +14,7 @@
   - 단일 진입점 - Gateway
   - 분산 데이터 프로젝션 - CQRS 
 - [운영](#운영)
+  - 셀프 힐링(LivenessProbe)
   - [CI/CD 설정](#cicd설정)
   - [동기식 호출 / 서킷 브레이킹 / 장애격리](#동기식-호출-서킷-브레이킹-장애격리)
   - [오토스케일 아웃](#오토스케일-아웃)
@@ -54,10 +55,41 @@
 
 # 운영
 
+## 셀프 힐링(LivenessProbe)
+문제가발생한컨테이너를종료하고, RestartPolicy (default: Always)에따라다시만들어지거나, 종료된상태로남는다.
+Pod의상태를체크하다가, Pod의상태가비정상인경우kubelet을통해서재시작한다.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+labels:
+test: liveness
+name: liveness-exec
+spec:
+containers:
+-name: liveness
+image: k8s.gcr.io/busybox
+args:
+-/bin/sh
+--c
+-touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+livenessProbe:
+exec:
+command:
+-cat
+-/tmp/healthy
+initialDelaySeconds: 3
+periodSeconds: 5
+```
+
+
+
+
+
+
 
 ---
-
-
 
 # 구현
 
