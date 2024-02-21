@@ -33,6 +33,7 @@
 8. 배송이 시작되면 고객에게 카카오톡 알림을 보낸다.
 
 ## 이벤트 스토밍
+![eventstroming](https://github.com/wwkang94/food-delivery/assets/25562517/1a934cc5-1261-4dc8-acde-ca3f57862f2d)
 
 ## MSA 아키텍처 구성도
 
