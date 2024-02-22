@@ -70,11 +70,16 @@ application.yaml 파일의 spring.cloud.gateway.routes 설정을 추가하여 �
 
 ## 분산 데이터 프로젝션 - CQRS 
 데이터 저장소에 대한 읽기 및 업데이트 작업을 구분하는 패턴인 명령과 쿼리의 역할 분리를 의미  
-Query 모델 설계
+Query 모델 설계  
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/44068872-75ff-4e20-964c-2cfd9713d7ab)
+
 
 # 운영
 
-## 셀프 힐링(LivenessProbe)
+## 환경 분리 - ConfigMap
+
+
+## 셀프 힐링 - LivenessProbe
 문제가발생한컨테이너를종료하고, RestartPolicy (default: Always)에따라다시만들어지거나, 종료된상태로남는다.  
 Pod의상태를체크하다가, Pod의상태가비정상인경우kubelet을통해서재시작한다.
 
