@@ -44,29 +44,31 @@
 
 # 구현
 
-## 분산트랜잭션 & 보상처리
-'''
+## 분산트랜잭션 & 보상처리 - Saga & Compensation
+```
 http POST :8082/products productName=TV stock=100
 http POST :8081/orders productId=[상품 Id] productName=TV qty=10 userId=1001
-'''
+```
 상품 등록 후 주문을 생성한다.
 
-'''
+```
 http GET :8081/orders/[주문번호]
-'''
+```
 주문 상태를 확인한다.
 
-'''
+```
 http GET :8083/deliveries
-'''
+```
 배송 조회 결과를 확인한다.
 
 ## 단일 진입점 - Gateway
-
+Microservice들의 endpoint를 단일화한다.  
+application.yaml 파일의 spring.cloud.gateway.routes 설정을 추가하여 라우팅 추가
 
 
 ## 분산 데이터 프로젝션 - CQRS 
-
+데이터 저장소에 대한 읽기 및 업데이트 작업을 구분하는 패턴인 명령과 쿼리의 역할 분리를 의미  
+Query 모델 설계
 
 # 운영
 
