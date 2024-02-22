@@ -16,7 +16,8 @@
   - 클라우드 배포
   - 컨테이너 자동확장 - HPA
   - 환경 분리 - ConfigMap
-  - 셀프 힐링(LivenessProbe)
+  - 셀프 힐링 - LivenessProbe
+  - 서비스 메쉬 응용 - Mesh
 
 ---
 
@@ -119,4 +120,9 @@ periodSeconds: 5
 
 ![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/ef095d7b-a7e5-46e0-8a5d-188446b16c5e)
 
+## 서비스 메쉬 응용 - Mesh
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/34c2ee8f-2208-4663-ac54-91846a50cc2d)
+> istio 설치
 
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/b3412968-ab7e-46bc-8003-e0d3e4eee237)
+> Kiali를 통한 서비스 메쉬 모니터링
