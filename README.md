@@ -76,6 +76,13 @@ Query 모델 설계
 
 # 운영
 
+## 클라우드 배포
+주문/배송/상품 서비스 배포 및 인스턴스 확장
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/a90c5ec7-5cca-4a01-a6ea-b19c811529c3)
+
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/5bf6e1cf-4ca5-49a8-8b08-ab4c0fc59336)
+
+
 ## 환경 분리 - ConfigMap
 
 
