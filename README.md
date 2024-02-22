@@ -47,17 +47,17 @@
 http POST :8082/products productName=TV stock=100
 http POST :8081/orders productId=[상품 Id] productName=TV qty=10 userId=1001
 ```
-상품 등록 후 주문을 생성한다.
+> 상품 등록 후 주문을 생성한다.
 
 ```
 http GET :8081/orders/[주문번호]
 ```
-주문 상태를 확인한다.
+> 주문 상태를 확인한다.
 
 ```
 http GET :8083/deliveries
 ```
-배송 조회 결과를 확인한다.
+> 배송 조회 결과를 확인한다.
 
 ## 단일 진입점 - Gateway
 Microservice들의 endpoint를 단일화한다.  
@@ -83,7 +83,9 @@ Query 모델 설계
 > [Auto Scale-out] CPU 사용율이 50% 이상이 될 경우 replica 를 10개까지 늘려준다.
 
 ## 환경 분리 - ConfigMap
-
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/b6d64ead-5e46-4926-b5e5-416710b18afd)
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/3bbd7b48-d0ff-40f0-a339-f47df45a5ffc)
+> ConfigMap으로부터 ORDER_LOG_LEVEL 정보 설정
 
 ## 셀프 힐링 - LivenessProbe
 문제가발생한컨테이너를종료하고, RestartPolicy (default: Always)에따라다시만들어지거나, 종료된상태로남는다.  
