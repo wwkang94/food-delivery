@@ -64,6 +64,7 @@ http GET :8083/deliveries
 ## 단일 진입점 - Gateway
 Microservice들의 endpoint를 단일화한다.  
 application.yaml 파일의 spring.cloud.gateway.routes 설정을 추가하여 라우팅 추가
+![image](https://github.com/wwkang94/furniture-delivery/assets/25562517/0bafa7ac-6cf3-4902-a797-3d956407c38a)
 
 
 ## 분산 데이터 프로젝션 - CQRS 
