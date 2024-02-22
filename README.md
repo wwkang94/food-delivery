@@ -44,11 +44,26 @@
 
 # 구현
 
-## 분산트랜잭션 - Saga
+## 분산트랜잭션 & 보상처리
+'''
+http POST :8082/products productName=TV stock=100
+http POST :8081/orders productId=[상품 Id] productName=TV qty=10 userId=1001
+'''
+상품 등록 후 주문을 생성한다.
 
-## 보상처리 - Compensation
+'''
+http GET :8081/orders/[주문번호]
+'''
+주문 상태를 확인한다.
+
+'''
+http GET :8083/deliveries
+'''
+배송 조회 결과를 확인한다.
 
 ## 단일 진입점 - Gateway
+
+
 
 ## 분산 데이터 프로젝션 - CQRS 
 
